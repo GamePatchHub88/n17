@@ -1,0 +1,276 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family:
+    "Cairo",
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #ffffff;
+  background: rgba(0, 255, 200, 0.316);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove default margins and padding */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove focus outline for mouse users */
+:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+/* ===== باندول نيوتن ===== */
+
+.ban-container {
+  position: relative;
+  width: 900px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  background-image: url("./Earth\ Render\ 3d\ Vector\,\ 3d\ Earth\ Render\,\ Globe\,\ Earth\,\ Planet\ PNG\ Image\ For\ Free\ Download.jpg");
+  background-size: cover;
+}
+.ban {
+  /* position: absolute; */
+  margin: 440px 0 0 0;
+  width: 10px;
+  height: 300px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  transform-origin: top center;
+}
+.b1 {
+  animation: ban 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.ban::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4a4e52;
+  align-self: flex-start;
+}
+.ban::after {
+  content: "";
+  position: absolute;
+  /* top: -20px;
+  left: -20px; */
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 98, 255);
+  border-radius: 50%;
+  background-image: url("./تنزيل.jpg");
+  background-size: cover;
+}
+.b2 {
+  /* background-color: rgb(0, 255, 0); */
+  animation: ban2 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.b3 {
+  /* background-color: rgb(0, 255, 0); */
+  animation: ban2 2s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.b4 {
+  animation: ban2 2s;
+  animation-delay: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.b5 {
+  animation: ban2 2s;
+  animation-delay: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.b6 {
+  animation: ban2 2s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes ban {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(-25deg);
+  }
+}
+
+@keyframes ban2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(335deg);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    display: grid;
+    justify-content: center;
+  }
+  .ban-container {
+    width: 100%;
+    gap: 70px;
+    padding: 20px;
+  }
+  .b4 {
+    animation-delay: 0s;
+  }
+  .b5 {
+    animation-delay: 2s;
+  }
+  .b6 {
+    animation: ban3 2s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .b1,
+  .b2,
+  .b3 {
+    display: none;
+  }
+  @keyframes ban2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(354deg);
+    }
+  }
+}
+@keyframes ban3 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
